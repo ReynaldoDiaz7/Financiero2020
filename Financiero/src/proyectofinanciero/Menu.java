@@ -32,7 +32,6 @@ public class Menu extends javax.swing.JFrame {
          btnDashboard.setBackground(new java.awt.Color(44,59,66));
          Dashboard.setVisible(true);
          
-         //OCULTAR PANEL
          btnInventario.setBackground(new java.awt.Color(44,59,66));
          Inventario.setVisible(false); 
          
@@ -42,14 +41,15 @@ public class Menu extends javax.swing.JFrame {
          btnActivoFijo.setBackground(new java.awt.Color(44,59,66));
          ActivoFijo.setVisible(false);
          
+         btnClientes.setBackground(new java.awt.Color(44,59,66));
+         Clientes.setVisible(false);
+         
          btnVentas.setBackground(new java.awt.Color(44,59,66));
          Ventas.setVisible(false);
          
          btnCxc.setBackground(new java.awt.Color(44,59,66));
          Cxc.setVisible(false);
          
-         btnAyuda.setBackground(new java.awt.Color(44,59,66));
-         Ayuda.setVisible(false);
         
     }
 
@@ -76,13 +76,20 @@ public class Menu extends javax.swing.JFrame {
         btnAyuda = new javax.swing.JLabel();
         Base = new javax.swing.JPanel();
         Dashboard = new javax.swing.JPanel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
         Inventario = new javax.swing.JPanel();
+        jLabel10 = new javax.swing.JLabel();
         Empleados = new javax.swing.JPanel();
+        jLabel11 = new javax.swing.JLabel();
         ActivoFijo = new javax.swing.JPanel();
+        jLabel12 = new javax.swing.JLabel();
         Clientes = new javax.swing.JPanel();
+        jLabel13 = new javax.swing.JLabel();
         Ventas = new javax.swing.JPanel();
+        jLabel14 = new javax.swing.JLabel();
         Cxc = new javax.swing.JPanel();
-        Ayuda = new javax.swing.JPanel();
+        jLabel15 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu2 = new javax.swing.JMenu();
         jMenu10 = new javax.swing.JMenu();
@@ -116,6 +123,11 @@ public class Menu extends javax.swing.JFrame {
         btnEmpleados.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btnEmpleados.setForeground(new java.awt.Color(255, 255, 255));
         btnEmpleados.setText("Empleados");
+        btnEmpleados.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnEmpleadosMouseClicked(evt);
+            }
+        });
 
         btnDashboard.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btnDashboard.setForeground(new java.awt.Color(255, 255, 255));
@@ -129,14 +141,29 @@ public class Menu extends javax.swing.JFrame {
         btnInventario.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btnInventario.setForeground(new java.awt.Color(255, 255, 255));
         btnInventario.setText("Inventario");
+        btnInventario.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnInventarioMouseClicked(evt);
+            }
+        });
 
         btnActivoFijo.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btnActivoFijo.setForeground(new java.awt.Color(255, 255, 255));
         btnActivoFijo.setText("Activo Fijo");
+        btnActivoFijo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnActivoFijoMouseClicked(evt);
+            }
+        });
 
         btnCxc.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btnCxc.setForeground(new java.awt.Color(255, 255, 255));
         btnCxc.setText("Cuentas por cobrar");
+        btnCxc.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnCxcMouseClicked(evt);
+            }
+        });
 
         btnSalir.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btnSalir.setForeground(new java.awt.Color(255, 255, 255));
@@ -145,6 +172,11 @@ public class Menu extends javax.swing.JFrame {
         btnVentas.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btnVentas.setForeground(new java.awt.Color(255, 255, 255));
         btnVentas.setText("Ventas");
+        btnVentas.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnVentasMouseClicked(evt);
+            }
+        });
 
         btnClientes.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btnClientes.setForeground(new java.awt.Color(255, 255, 255));
@@ -210,109 +242,168 @@ public class Menu extends javax.swing.JFrame {
         Base.setBackground(new java.awt.Color(255, 255, 255));
         Base.setLayout(new java.awt.CardLayout());
 
+        jLabel9.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        jLabel9.setText("Dashboard");
+
+        jLabel16.setText("Trafico del CPU");
+
         javax.swing.GroupLayout DashboardLayout = new javax.swing.GroupLayout(Dashboard);
         Dashboard.setLayout(DashboardLayout);
         DashboardLayout.setHorizontalGroup(
             DashboardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1196, Short.MAX_VALUE)
+            .addGroup(DashboardLayout.createSequentialGroup()
+                .addGroup(DashboardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(DashboardLayout.createSequentialGroup()
+                        .addGap(99, 99, 99)
+                        .addComponent(jLabel9))
+                    .addGroup(DashboardLayout.createSequentialGroup()
+                        .addGap(136, 136, 136)
+                        .addComponent(jLabel16)))
+                .addContainerGap(926, Short.MAX_VALUE))
         );
         DashboardLayout.setVerticalGroup(
             DashboardLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(DashboardLayout.createSequentialGroup()
+                .addGap(65, 65, 65)
+                .addComponent(jLabel9)
+                .addGap(71, 71, 71)
+                .addComponent(jLabel16)
+                .addContainerGap(306, Short.MAX_VALUE))
         );
 
         Base.add(Dashboard, "card2");
+
+        jLabel10.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        jLabel10.setText("Inventario");
 
         javax.swing.GroupLayout InventarioLayout = new javax.swing.GroupLayout(Inventario);
         Inventario.setLayout(InventarioLayout);
         InventarioLayout.setHorizontalGroup(
             InventarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1196, Short.MAX_VALUE)
+            .addGroup(InventarioLayout.createSequentialGroup()
+                .addGap(99, 99, 99)
+                .addComponent(jLabel10)
+                .addContainerGap(935, Short.MAX_VALUE))
         );
         InventarioLayout.setVerticalGroup(
             InventarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 500, Short.MAX_VALUE)
+            .addGroup(InventarioLayout.createSequentialGroup()
+                .addGap(65, 65, 65)
+                .addComponent(jLabel10)
+                .addContainerGap(391, Short.MAX_VALUE))
         );
 
         Base.add(Inventario, "card3");
+
+        jLabel11.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        jLabel11.setText("Empleado");
 
         javax.swing.GroupLayout EmpleadosLayout = new javax.swing.GroupLayout(Empleados);
         Empleados.setLayout(EmpleadosLayout);
         EmpleadosLayout.setHorizontalGroup(
             EmpleadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1196, Short.MAX_VALUE)
+            .addGroup(EmpleadosLayout.createSequentialGroup()
+                .addGap(99, 99, 99)
+                .addComponent(jLabel11)
+                .addContainerGap(941, Short.MAX_VALUE))
         );
         EmpleadosLayout.setVerticalGroup(
             EmpleadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 500, Short.MAX_VALUE)
+            .addGroup(EmpleadosLayout.createSequentialGroup()
+                .addGap(65, 65, 65)
+                .addComponent(jLabel11)
+                .addContainerGap(391, Short.MAX_VALUE))
         );
 
         Base.add(Empleados, "card4");
+
+        jLabel12.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        jLabel12.setText("Activo Fijo");
 
         javax.swing.GroupLayout ActivoFijoLayout = new javax.swing.GroupLayout(ActivoFijo);
         ActivoFijo.setLayout(ActivoFijoLayout);
         ActivoFijoLayout.setHorizontalGroup(
             ActivoFijoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1196, Short.MAX_VALUE)
+            .addGroup(ActivoFijoLayout.createSequentialGroup()
+                .addGap(99, 99, 99)
+                .addComponent(jLabel12)
+                .addContainerGap(932, Short.MAX_VALUE))
         );
         ActivoFijoLayout.setVerticalGroup(
             ActivoFijoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 500, Short.MAX_VALUE)
+            .addGroup(ActivoFijoLayout.createSequentialGroup()
+                .addGap(65, 65, 65)
+                .addComponent(jLabel12)
+                .addContainerGap(391, Short.MAX_VALUE))
         );
 
         Base.add(ActivoFijo, "card5");
+
+        jLabel13.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        jLabel13.setText("Clientes");
 
         javax.swing.GroupLayout ClientesLayout = new javax.swing.GroupLayout(Clientes);
         Clientes.setLayout(ClientesLayout);
         ClientesLayout.setHorizontalGroup(
             ClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1196, Short.MAX_VALUE)
+            .addGroup(ClientesLayout.createSequentialGroup()
+                .addGap(99, 99, 99)
+                .addComponent(jLabel13)
+                .addContainerGap(973, Short.MAX_VALUE))
         );
         ClientesLayout.setVerticalGroup(
             ClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 500, Short.MAX_VALUE)
+            .addGroup(ClientesLayout.createSequentialGroup()
+                .addGap(65, 65, 65)
+                .addComponent(jLabel13)
+                .addContainerGap(391, Short.MAX_VALUE))
         );
 
         Base.add(Clientes, "card6");
+
+        jLabel14.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        jLabel14.setText("Ventas");
 
         javax.swing.GroupLayout VentasLayout = new javax.swing.GroupLayout(Ventas);
         Ventas.setLayout(VentasLayout);
         VentasLayout.setHorizontalGroup(
             VentasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1196, Short.MAX_VALUE)
+            .addGroup(VentasLayout.createSequentialGroup()
+                .addGap(99, 99, 99)
+                .addComponent(jLabel14)
+                .addContainerGap(990, Short.MAX_VALUE))
         );
         VentasLayout.setVerticalGroup(
             VentasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 500, Short.MAX_VALUE)
+            .addGroup(VentasLayout.createSequentialGroup()
+                .addGap(65, 65, 65)
+                .addComponent(jLabel14)
+                .addContainerGap(391, Short.MAX_VALUE))
         );
 
         Base.add(Ventas, "card7");
+
+        jLabel15.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        jLabel15.setText("Cuentas por cobrar");
 
         javax.swing.GroupLayout CxcLayout = new javax.swing.GroupLayout(Cxc);
         Cxc.setLayout(CxcLayout);
         CxcLayout.setHorizontalGroup(
             CxcLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1196, Short.MAX_VALUE)
+            .addGroup(CxcLayout.createSequentialGroup()
+                .addGap(99, 99, 99)
+                .addComponent(jLabel15)
+                .addContainerGap(792, Short.MAX_VALUE))
         );
         CxcLayout.setVerticalGroup(
             CxcLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 500, Short.MAX_VALUE)
+            .addGroup(CxcLayout.createSequentialGroup()
+                .addGap(65, 65, 65)
+                .addComponent(jLabel15)
+                .addContainerGap(391, Short.MAX_VALUE))
         );
 
         Base.add(Cxc, "card8");
-
-        javax.swing.GroupLayout AyudaLayout = new javax.swing.GroupLayout(Ayuda);
-        Ayuda.setLayout(AyudaLayout);
-        AyudaLayout.setHorizontalGroup(
-            AyudaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1196, Short.MAX_VALUE)
-        );
-        AyudaLayout.setVerticalGroup(
-            AyudaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 500, Short.MAX_VALUE)
-        );
-
-        Base.add(Ayuda, "card9");
 
         javax.swing.GroupLayout PrincipalLayout = new javax.swing.GroupLayout(Principal);
         Principal.setLayout(PrincipalLayout);
@@ -536,7 +627,6 @@ public class Menu extends javax.swing.JFrame {
          btnDashboard.setBackground(new java.awt.Color(44,59,66));
          Dashboard.setVisible(true);
          
-         //OCULTAR PANEL
          btnInventario.setBackground(new java.awt.Color(44,59,66));
          Inventario.setVisible(false); 
          
@@ -546,22 +636,183 @@ public class Menu extends javax.swing.JFrame {
          btnActivoFijo.setBackground(new java.awt.Color(44,59,66));
          ActivoFijo.setVisible(false);
          
+         btnClientes.setBackground(new java.awt.Color(44,59,66));
+         Clientes.setVisible(false);
+         
          btnVentas.setBackground(new java.awt.Color(44,59,66));
          Ventas.setVisible(false);
          
          btnCxc.setBackground(new java.awt.Color(44,59,66));
          Cxc.setVisible(false);
          
-         btnAyuda.setBackground(new java.awt.Color(44,59,66));
-         Ayuda.setVisible(false);
          
         
         
     }//GEN-LAST:event_btnDashboardMouseClicked
 
     private void btnClientesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnClientesMouseClicked
-        // TODO add your handling code here:
+
+         //MOSTRAR CLIENTES
+         btnDashboard.setBackground(new java.awt.Color(44,59,66));
+         Dashboard.setVisible(false);
+         
+         btnInventario.setBackground(new java.awt.Color(44,59,66));
+         Inventario.setVisible(false); 
+         
+         btnEmpleados.setBackground(new java.awt.Color(44,59,66));
+         Empleados.setVisible(false);
+         
+         btnActivoFijo.setBackground(new java.awt.Color(44,59,66));
+         ActivoFijo.setVisible(false);
+         
+         btnClientes.setBackground(new java.awt.Color(44,59,66));
+         Clientes.setVisible(true);
+         
+         btnVentas.setBackground(new java.awt.Color(44,59,66));
+         Ventas.setVisible(false);
+         
+         btnCxc.setBackground(new java.awt.Color(44,59,66));
+         Cxc.setVisible(false);
+         
+         
     }//GEN-LAST:event_btnClientesMouseClicked
+
+    private void btnInventarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnInventarioMouseClicked
+
+         //MOSTRAR INVENTARIOS
+         btnDashboard.setBackground(new java.awt.Color(44,59,66));
+         Dashboard.setVisible(false);
+         
+         btnInventario.setBackground(new java.awt.Color(44,59,66));
+         Inventario.setVisible(true); 
+         
+         btnEmpleados.setBackground(new java.awt.Color(44,59,66));
+         Empleados.setVisible(false);
+         
+         btnActivoFijo.setBackground(new java.awt.Color(44,59,66));
+         ActivoFijo.setVisible(false);
+         
+         btnClientes.setBackground(new java.awt.Color(44,59,66));
+         Clientes.setVisible(false);
+         
+         btnVentas.setBackground(new java.awt.Color(44,59,66));
+         Ventas.setVisible(false);
+         
+         btnCxc.setBackground(new java.awt.Color(44,59,66));
+         Cxc.setVisible(false);
+         
+
+         
+    }//GEN-LAST:event_btnInventarioMouseClicked
+
+    private void btnEmpleadosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEmpleadosMouseClicked
+
+         //MOSTRAR EMPLEADOS
+         btnDashboard.setBackground(new java.awt.Color(44,59,66));
+         Dashboard.setVisible(false);
+         
+         btnInventario.setBackground(new java.awt.Color(44,59,66));
+         Inventario.setVisible(false); 
+         
+         btnEmpleados.setBackground(new java.awt.Color(44,59,66));
+         Empleados.setVisible(true);
+         
+         btnActivoFijo.setBackground(new java.awt.Color(44,59,66));
+         ActivoFijo.setVisible(false);
+         
+         btnClientes.setBackground(new java.awt.Color(44,59,66));
+         Clientes.setVisible(false);
+         
+         btnVentas.setBackground(new java.awt.Color(44,59,66));
+         Ventas.setVisible(false);
+         
+         btnCxc.setBackground(new java.awt.Color(44,59,66));
+         Cxc.setVisible(false);
+         
+        
+    }//GEN-LAST:event_btnEmpleadosMouseClicked
+
+    private void btnActivoFijoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnActivoFijoMouseClicked
+
+         //MOSTRAR ACTIVO FIJO
+         btnDashboard.setBackground(new java.awt.Color(44,59,66));
+         Dashboard.setVisible(false);
+         
+         btnInventario.setBackground(new java.awt.Color(44,59,66));
+         Inventario.setVisible(false); 
+         
+         btnEmpleados.setBackground(new java.awt.Color(44,59,66));
+         Empleados.setVisible(false);
+         
+         btnActivoFijo.setBackground(new java.awt.Color(44,59,66));
+         ActivoFijo.setVisible(true);
+         
+         btnClientes.setBackground(new java.awt.Color(44,59,66));
+         Clientes.setVisible(false);
+         
+         btnVentas.setBackground(new java.awt.Color(44,59,66));
+         Ventas.setVisible(false);
+         
+         btnCxc.setBackground(new java.awt.Color(44,59,66));
+         Cxc.setVisible(false);
+         
+         
+    }//GEN-LAST:event_btnActivoFijoMouseClicked
+
+    private void btnVentasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnVentasMouseClicked
+
+         //MOSTRAR VENTAS
+         btnDashboard.setBackground(new java.awt.Color(44,59,66));
+         Dashboard.setVisible(false);
+         
+         btnInventario.setBackground(new java.awt.Color(44,59,66));
+         Inventario.setVisible(false); 
+         
+         btnEmpleados.setBackground(new java.awt.Color(44,59,66));
+         Empleados.setVisible(false);
+         
+         btnActivoFijo.setBackground(new java.awt.Color(44,59,66));
+         ActivoFijo.setVisible(false);
+         
+         btnClientes.setBackground(new java.awt.Color(44,59,66));
+         Clientes.setVisible(false);
+         
+         btnVentas.setBackground(new java.awt.Color(44,59,66));
+         Ventas.setVisible(true);
+         
+         btnCxc.setBackground(new java.awt.Color(44,59,66));
+         Cxc.setVisible(false);
+         
+         
+    }//GEN-LAST:event_btnVentasMouseClicked
+
+    private void btnCxcMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCxcMouseClicked
+
+         //MOSTRAR CUENTAS POR COBRAR
+         btnDashboard.setBackground(new java.awt.Color(44,59,66));
+         Dashboard.setVisible(false);
+         
+         btnInventario.setBackground(new java.awt.Color(44,59,66));
+         Inventario.setVisible(false); 
+         
+         btnEmpleados.setBackground(new java.awt.Color(44,59,66));
+         Empleados.setVisible(false);
+         
+         btnActivoFijo.setBackground(new java.awt.Color(44,59,66));
+         ActivoFijo.setVisible(false);
+         
+         btnClientes.setBackground(new java.awt.Color(44,59,66));
+         Clientes.setVisible(false);
+         
+         btnVentas.setBackground(new java.awt.Color(44,59,66));
+         Ventas.setVisible(false);
+         
+         btnCxc.setBackground(new java.awt.Color(44,59,66));
+         Cxc.setVisible(true);
+         
+
+         
+    }//GEN-LAST:event_btnCxcMouseClicked
 
     /**
      * @param args the command line arguments
@@ -600,7 +851,6 @@ public class Menu extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel ActivoFijo;
-    private javax.swing.JPanel Ayuda;
     private javax.swing.JPanel Base;
     private javax.swing.JPanel Clientes;
     private javax.swing.JPanel Cxc;
@@ -622,6 +872,13 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JLabel btnSalir;
     private javax.swing.JLabel btnVentas;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -629,6 +886,7 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu10;
     private javax.swing.JMenu jMenu11;
